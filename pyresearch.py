@@ -128,8 +128,8 @@ else:
         exit(0)
     for i, r in tqdm(enumerate(scopusPublications)):
         if scopusPublications[i]['Authors'] is not None:
-            scopusPublications[i]['Authors'] = scopusCites[r['scopusID']]['scopusAuthors']
             try:
+                scopusPublications[i]['Authors'] = scopusCites[r['scopusID']]['scopusAuthors']
                 scopusPublications[i]['Citations'] = scopusCites[r['scopusID']]['Citations']
                 scopusPublications[i]['Citations in Past Year'] = scopusCites[r['scopusID']]['Citations in Past Year']
                 scopusPublications[i]['Citations Rate'] = scopusCites[r['scopusID']]['Citations Rate']
